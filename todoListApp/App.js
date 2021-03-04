@@ -8,20 +8,23 @@ import {
   ScrollView,
 } from 'react-native';
 
+import TodoInsert from './components/TodoInsert';
+
 const App = () => {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.appTitle}>Hello Todolist</Text>
       <View style={styles.card}>
-        <TextInput style={styles.input} placeholder="Add an item!" />
+        <TodoInsert />
         <ScrollView>
+          <View>
             <Text>TodoList</Text>
+          </View>
         </ScrollView>
       </View>
     </SafeAreaView>
   );
 };
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
